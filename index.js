@@ -13,7 +13,7 @@ submit.addEventListener("click", formSubmit = ()=>{
         if(pos == null){
             task.appendChild(li);
         }else{
-            task.insertBefore(li);
+            task.insertBefore(li, task.children[0]);
         }
        
         input.value=""  

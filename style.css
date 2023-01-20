@@ -11,9 +11,15 @@ body{
     width:700px;
     height:500px;
     background:white;
+    padding:20px;
 }
-h1{
+h3,h1{
    color: #034f84;
+}
+h3{
+    margin:0;
+    font-size:20px;
+    text-align: left;
 }
 input{
     width:400px;
@@ -40,6 +46,19 @@ button:hover{
     margin-top:10px;
     margin-left:-283px;
     color:red;
-    font-size: 16px;
-    
+    font-size: 16px;   
+}
+ol{
+    text-align: left;
+}
+.result{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.remove{
+    margin-left: 80px;
+    color:red;
+    font-size:20px;
+    cursor: pointer;
 }

@@ -1,12 +1,38 @@
 const submit = document.getElementById('submit-btn');
 const input = document.getElementById('task');
-const firstTask = document.getElementById('first-task');
+
 submit.addEventListener("click", formSubmit = ()=>{
-    console.log("input.value:-",input.value)
+    document.getElementById('error').innerHTML = ""; 
+    let task = document.getElementById("box");
     if(input.value == ''){
        document.getElementById('error').innerHTML = "Please Enter your task";
     }else{
-        document.getElementById('error').innerHTML = ""; 
+        let li = document.createElement('li');
+        li.textContent = input.value;
+        let pos = task.firstElementChild;
+        if(pos == null){
+            task.appendChild(li);
+        }else{
+            task.insertBefore(li);
+        }
+       
+        input.value=""  
+
+        let a = document.createElement('a');
+        a.textContent = "x";
+        a.href = "javascript:void(0)"
+        a.className = "remove";
+        li.appendChild(a);
+        
+        
     }
-    firstTask.innerHTML =  input.value;
+    
 })
+let deletbtn = document.querySelector('ul');
+        deletbtn.addEventListener('click',function(e){
+            console.log("Pranaya");
+            // let  box = document.getElementById('box');
+            // let li = e.target.parentNode;
+            // box.removeChild(li);
+        })
+  

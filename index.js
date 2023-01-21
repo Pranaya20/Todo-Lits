@@ -21,18 +21,17 @@ submit.addEventListener("click", formSubmit = ()=>{
         let a = document.createElement('a');
         a.textContent = "x";
         a.href = "javascript:void(0)"
-        a.className = "remove";
-        li.appendChild(a);
-        
-        
+        // a.className = "remove";
+        a.id = "remove";
+        li.appendChild(a); 
     }
-    
-})
-let deletbtn = document.querySelector('ul');
-        deletbtn.addEventListener('click',function(e){
-            console.log("Pranaya");
-            // let  box = document.getElementById('box');
-            // let li = e.target.parentNode;
-            // box.removeChild(li);
+
+    let deletbtn = document.getElementById('remove');
+        deletbtn.addEventListener('click',handleClick = (e)=>{
+            let  box = document.getElementById('box');
+            let li = e.target.parentNode;
+            box.removeChild(li);
         })
   
+    
+})
